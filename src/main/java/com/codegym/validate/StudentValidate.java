@@ -21,6 +21,7 @@ public class StudentValidate implements Validator {
         for (Student s : list) {
             if(s.getEmail().equals(student.getEmail())) {
                 errors.rejectValue("email" , "email.duplicate");
+                break;
             }
         }
     }

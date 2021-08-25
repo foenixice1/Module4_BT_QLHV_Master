@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.time.LocalDate;
+import java.util.Date;
 
 
 @Entity
@@ -16,7 +17,7 @@ public class Student {
     @Pattern(regexp = "^[^\\d]+$", message = "Name only letters can't enter numbers")
     private String name;
 
-    private LocalDate date;
+    private String date;
     private int phone;
 
     @NotEmpty
@@ -30,7 +31,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(Integer id, String name, LocalDate date, int phone, String email, ClassRoom classRoom) {
+    public Student(Integer id, String name, String date, int phone, String email, ClassRoom classRoom) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -55,11 +56,11 @@ public class Student {
         this.name = name;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

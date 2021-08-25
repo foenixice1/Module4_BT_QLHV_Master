@@ -30,21 +30,21 @@
 
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input id="name" type="text" th:field="*{name}" class="form-control" required
+                                <input id="name" type="text" placeholder="Enter name" th:field="*{name}" class="form-control" required
                                        autofocus>
                                 <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
                             </div>
 
                             <div class="form-group">
                                 <label for="date">Birthday</label>
-                                <input id="date" type="text" th:field="*{date}" class="form-control" required
+                                <input id="date" type="date" placeholder="Enter birthday" th:field="*{date}" class="form-control" required
                                        autofocus>
 <!--                                <p style="color: red" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></p>-->
                             </div>
 
                             <div class="form-group">
                                 <label for="phone">PhoneNumber</label>
-                                <input id="phone" type="text" class="form-control" th:field="*{phone}" required
+                                <input id="phone" type="text" placeholder="Enter phone" class="form-control" th:field="*{phone}" required
                                        autofocus>
 <!--                                <p style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>-->
 
@@ -52,7 +52,7 @@
 
                             <div class="form-group">
                                 <label for="age">email</label>
-                                <input id="age" type="text" th:field="*{email}" class="form-control" required
+                                <input id="age" type="text" placeholder="Enter email" th:field="*{email}" class="form-control" required
                                        autofocus>
                                 <p style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
 
